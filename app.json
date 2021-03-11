@@ -1,0 +1,8 @@
+{
+  "name": "cincos",
+  "displayName": "cincos",
+  "android":{
+    "package":"com.cincos",
+    "versionCode": 5
+  }
+}
