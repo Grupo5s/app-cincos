@@ -29,6 +29,9 @@ function Dashboard(props) {
             setResumoTratamento(resumo);
             setLoading(false);
         });
+        setTimeout(()=>{
+            setLoading(false);
+        },1000);
     }, []);
 
     useEffect(() => {

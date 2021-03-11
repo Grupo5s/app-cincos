@@ -13,6 +13,7 @@ import Receitas from './pages/receitas';
 import RegraDaMao from './pages/regradamao';
 import Ouvidoria from './pages/ouvidoria';
 import CameraView from './pages/perfil/camera';
+import LivrosReceitas from './pages/livros';
 
 const Stack = createStackNavigator();
 
@@ -88,6 +89,12 @@ const Routes = () => {
             <Stack.Screen
                 name="CameraView"
                 component={CameraView}
+                options={{
+                    headerShown: false
+                }} />
+            <Stack.Screen
+                name="LivrosReceitas"
+                component={LivrosReceitas}
                 options={{
                     headerShown: false
                 }} />

@@ -56,6 +56,9 @@ function VerticalMenu(props) {
             <TouchableOpacity onPress={() => navigation.navigate('Receitas')}>
                 <Icon name="book" size={22} style={page == 'receitas' ? mainStyles.iconActive : mainStyles.iconInactive} />
             </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('LivrosReceitas')}>
+                <Icon name="address-book" size={22} style={page == 'livros' ? mainStyles.iconActive : mainStyles.iconInactive} />
+            </TouchableOpacity>
             <TouchableOpacity onPress={() => openTelegram() }>
                 <Icon name="comments" size={22} style={mainStyles.iconInactive} />
             </TouchableOpacity>
