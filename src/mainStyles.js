@@ -71,7 +71,7 @@ const mainStyles = StyleSheet.create({
     },
     verticalMenu: {
         marginTop: 0,
-        backgroundColor: '#BCBF00',
+        backgroundColor: '#676838',
         width: 40
     },
     layout: {
@@ -79,7 +79,7 @@ const mainStyles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'stretch',
-        marginTop: 29
+        marginTop: 0
     },
     iconActive: {
         width: 40,
@@ -88,7 +88,7 @@ const mainStyles = StyleSheet.create({
         color: '#ffffff',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'transparent'
+        backgroundColor: '#BCBF00'
     },
     iconInactive: {
         width: 40,
@@ -107,7 +107,7 @@ const mainStyles = StyleSheet.create({
         alignItems: 'center',
         color: '#ffffff',
         backgroundColor: '#676838',
-        marginTop: 1
+        marginTop: 0
     },
     textGrayLight: {
         color: '#707070',

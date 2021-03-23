@@ -23,6 +23,11 @@ function obterBioimpedancia(uid) {
     return api.post(`paciente/bioimpedancia`, { Uid: uid });
 }
 
+function obterPerimetria(codigoPaciente) {
+    return api.get(`ultimasTresPerimetrias/${codigoPaciente}`);
+}
+
+
 function enviarMensagemOuvidoria(codigoPaciente,mensagem) {
     return api.post(`paciente/enviarContato/${codigoPaciente}`, mensagem);
 }
@@ -31,4 +36,4 @@ function atualizarPlayerID(usuario) {
     return api.post(`paciente/atualizarPlayerID`,usuario);
 }
 
-export { verificarCpf, obterFicha, obterResumoTratamento, obterBioimpedancia, enviarMensagemOuvidoria, atualizarUid, atualizarPlayerID }
+export { verificarCpf, obterFicha, obterResumoTratamento, obterBioimpedancia, enviarMensagemOuvidoria, atualizarUid, atualizarPlayerID, obterPerimetria }

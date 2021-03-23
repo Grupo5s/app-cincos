@@ -34,6 +34,7 @@ const Login = (props) => {
         OneSignal.setAppId('fdb8cb61-1ef7-407a-8efc-8383cab9a4f4');
         const deviceState = await OneSignal.getDeviceState();
         setPlayerID(deviceState.userId);
+        dispatch({ type: 'CHANGE_PLAYERID', playerId: deviceState.userId });
     }
 
     async function continuar() {
@@ -48,6 +49,11 @@ const Login = (props) => {
 
                     const credentials = response;
                     console.log(credentials.user.uid);
+
+                    atualizarUid(credentials.user.uid, email).then(response => { }).catch(error => {
+                        console.log(error);
+                    });
+
                     obterFicha({
                         Email: email,
                         Uid: credentials.user.uid
@@ -56,11 +62,6 @@ const Login = (props) => {
                         const paciente = response.data;
 
                         if (paciente.StatusPaciente == 2) {
-
-                            atualizarUid(credentials.user.uid, email).then(response => { }).catch(error => {
-                                console.log(error);
-                            });
-
                             atualizarPlayerID({
                                 Uid: credentials.user.uid,
                                 PlayerID: playerID
@@ -179,7 +180,7 @@ const Login = (props) => {
                 <Text>{translate('PRIVACY_TERMS')}</Text>
             </TouchableOpacity>
             <View style={{ backgroundColor: 'transparent', padding: 10, marginTop: 10 }}>
-                <Text style={{ fontSize: 12, color: '#999999', textAlign: 'center' }}>versão 2.0 (6)</Text>
+                <Text style={{ fontSize: 12, color: '#999999', textAlign: 'center' }}>versão 2.0 ({authReducer.versao})</Text>
             </View>
         </View>
         <DialogInput isDialogVisible={isOpen}

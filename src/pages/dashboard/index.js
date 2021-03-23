@@ -4,7 +4,7 @@ import mainStyles from '../../mainStyles';
 import VerticalMenu from '../../component/VerticalMenu';
 import linha from '../../assets/linha.png';
 import Icon from 'react-native-vector-icons/Feather';
-import { obterResumoTratamento } from '../../service/paciente';
+import { atualizarPlayerID, obterResumoTratamento } from '../../service/paciente';
 import PageTitle from '../../component/PageTitle';
 import Loading5S from '../../component/Loading5S';
 import { useSelector } from 'react-redux';
@@ -24,6 +24,14 @@ function Dashboard(props) {
     useEffect(() => {
         setLoading(true);
         setPaciente(authReducer.userData);
+        
+        atualizarPlayerID({
+            Uid: authReducer.uid,
+            PlayerID: authReducer.playerId
+        }).then(response => {
+            console.log(response);
+        });
+
         obterResumoTratamento(authReducer.codigoPaciente).then(response => {
             const resumo = response.data;
             setResumoTratamento(resumo);
@@ -96,7 +104,7 @@ function Dashboard(props) {
                 color="#bbbe00"
                 overlayColor="rgba(255,255,255,0.80)" />
             <View style={{ backgroundColor: 'transparent', padding: 10, marginTop: 10 }}>
-                <Text style={{ fontSize: 12, color: '#999999', textAlign: 'center' }}>versão 2.0 (6)</Text>
+                <Text style={{ fontSize: 12, color: '#999999', textAlign: 'center' }}>versão 2.0 ({authReducer.versao})</Text>
             </View>
         </ScrollView>
     </View>

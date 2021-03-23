@@ -1,9 +1,11 @@
 const INITIAL_STATE = {
+    versao: 8,
     conectado: false,
     uid: '',
     codigoPaciente: 0,
     userData: {},
     resumoTratamento: {},
+    playerId: 'playerId'
 }
 
 export default function authReducer(state = INITIAL_STATE, action) {
@@ -18,6 +20,8 @@ export default function authReducer(state = INITIAL_STATE, action) {
             return { ...state, userData: action.userData };
         case 'CHANGE_RESUMOTRATAMENTO':
             return { ...state, resumoTratamento: action.resumoTratamento };
+        case 'CHANGE_PLAYERID':
+            return { ...state, playerId: action.playerId };
         default:
             return state;
     }
