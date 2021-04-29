@@ -46,7 +46,7 @@ function MeusResultados(props) {
                             if (peso > pc.PesoAtual) {
                                 console.log(peso, 1);
                                 pc.Pesos[i].textColor = '#e63946';
-                                pc.Pesos[i].text = 'Pode melhorar!';
+                                pc.Pesos[i].text = 'Podemos melhorar!';
                             } else if (peso == pc.PesoAtual) {
                                 console.log(peso, 2);
                                 pc.Pesos[i].textColor = '#e85d04';
@@ -56,7 +56,7 @@ function MeusResultados(props) {
                             if (peso > ultimoPeso) {
                                 console.log(peso, 3);
                                 pc.Pesos[i].textColor = '#e63946';
-                                pc.Pesos[i].text = 'Pode Melhorar!';
+                                pc.Pesos[i].text = 'Podemos Melhorar!';
                             } else if (peso == ultimoPeso) {
                                 console.log(peso, 4);
                                 pc.Pesos[i].textColor = '#e85d04';

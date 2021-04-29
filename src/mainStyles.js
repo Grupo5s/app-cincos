@@ -69,6 +69,13 @@ const mainStyles = StyleSheet.create({
         paddingLeft: 10,
         backgroundColor: '#f4f4f4'
     },
+    viewRecuoImg: {
+        flex: 1,
+        marginTop: 0,
+        padding: 10,
+        paddingLeft: 10,
+        backgroundColor: '#f4f4f4'
+    },
     verticalMenu: {
         marginTop: 0,
         backgroundColor: '#676838',
@@ -139,7 +146,7 @@ const mainStyles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'row',
-        backgroundColor: '#ffffff',
+        backgroundColor: '#BCBF00',
         padding: 20,
         borderRadius: 10,
         shadowColor: '#000000',

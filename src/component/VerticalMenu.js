@@ -3,15 +3,16 @@ import { View, Image, Text, TouchableOpacity, Linking } from 'react-native';
 import mainStyles from '../mainStyles';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useDispatch, useSelector } from 'react-redux';
+import { setDados } from '../service/firebase';
 
 function VerticalMenu(props) {
 
     const { navigation, page } = props;
-    const authReducer = useSelector(state=>state.authReducer);
+    const authReducer = useSelector(state => state.authReducer);
     const dispatch = useDispatch();
 
     function openTelegram() {
-        Linking.openURL(authReducer.userData.LinkGrupoTelegram+'&app=5S');
+        Linking.openURL(authReducer.userData.LinkGrupoTelegram + '&app=5S');
     }
 
     function sair() {
@@ -30,7 +31,9 @@ function VerticalMenu(props) {
             userData: {}
         });
 
-        navigation.navigate('Login');
+        setDados(`Paciente/${authReducer.codigoPaciente}/Conectado`,false).then(response=> {   
+            navigation.navigate('Login');
+        });
     }
 
     return <>
@@ -53,18 +56,21 @@ function VerticalMenu(props) {
             <TouchableOpacity onPress={() => navigation.navigate('Bioimpedancia')}>
                 <Icon name="bar-chart" size={22} style={page == 'bioimpedancia' ? mainStyles.iconActive : mainStyles.iconInactive} />
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('Receitas')}>
+            {/*<TouchableOpacity onPress={() => navigation.navigate('Receitas')}>
                 <Icon name="book" size={22} style={page == 'receitas' ? mainStyles.iconActive : mainStyles.iconInactive} />
+            </TouchableOpacity>*/}
+            <TouchableOpacity onPress={() => navigation.navigate('Exercicios')}>
+                <Icon name="heartbeat" size={22} style={page == 'exercicios' ? mainStyles.iconActive : mainStyles.iconInactive} />
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('LivrosReceitas')}>
                 <Icon name="address-book" size={22} style={page == 'livros' ? mainStyles.iconActive : mainStyles.iconInactive} />
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => openTelegram() }>
+            {/*<TouchableOpacity onPress={() => openTelegram() }>
                 <Icon name="comments" size={22} style={mainStyles.iconInactive} />
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('Ouvidoria')}>
+                </TouchableOpacity>*/}
+            {/*<TouchableOpacity onPress={() => navigation.navigate('Ouvidoria')}>
                 <Icon name="bullhorn" size={20} style={page == 'ouvidoria' ? mainStyles.iconActive : mainStyles.iconInactive} />
-            </TouchableOpacity>
+                </TouchableOpacity>*/}
             <TouchableOpacity onPress={() => navigation.navigate('Duvidas')}>
                 <Icon name="question-circle" size={22} style={page == 'duvidas' ? mainStyles.iconActive : mainStyles.iconInactive} />
             </TouchableOpacity>

@@ -10,10 +10,10 @@ function PageTitle({ title, showLogo = false }) {
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <View style={{ width: '50%' }}><Text style={{ fontSize: 16, color: '#666666', fontWeight: 'bold', marginLeft: 5 }}>{title}</Text></View>
             <View style={{ width: '50%', flexDirection: 'row', justifyContent: 'flex-end' }}>
-                <TouchableOpacity style={{ marginRight: 20, marginTop: 16 }} >
+                {/*<TouchableOpacity style={{ marginRight: 20, marginTop: 16 }} >
                     <Icon name="bell" size={16} style={{ color: 'gray' }} />
                 </TouchableOpacity>
-                {/*<TouchableOpacity style={{marginRight: 20, marginTop: 16}}>
+                <TouchableOpacity style={{marginRight: 20, marginTop: 16}}>
                     <Icon name="envelope" size={16} style={{color: 'gray'}}/>
                 </TouchableOpacity>*/}
                 {showLogo && <Image source={logo} style={{ width: 50, height: 50 }} />}

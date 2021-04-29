@@ -68,7 +68,7 @@ function Perfil(props) {
                         <Text style={mainStyles.nomeDestaque}>{paciente.DataInicioTratamento}</Text>
                     </View>
                     <View style={styles.viewDataFim}>
-                        <Text style={mainStyles.textGrayLightNormal}>Termino</Text>
+                        <Text style={mainStyles.textGrayLightNormal}>Término</Text>
                         <Text style={mainStyles.nomeDestaque}>{paciente.DataFimTratamento}</Text>
                     </View>
                 </View>

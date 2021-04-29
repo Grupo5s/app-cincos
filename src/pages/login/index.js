@@ -6,7 +6,7 @@ import mainStyles from '../../mainStyles';
 import { singleAlert } from '../../utils/alerts';
 import OneSignal from 'react-native-onesignal';
 import { useDispatch, useSelector } from 'react-redux';
-import { alterarSenha, autenticarComEmailSenha, obterDados,enviarEmailRedefinicaoSenha } from '../../service/firebase';
+import { alterarSenha, autenticarComEmailSenha, obterDados,enviarEmailRedefinicaoSenha, setDados } from '../../service/firebase';
 import { atualizarPlayerID, atualizarUid, obterFicha } from '../../service/paciente';
 import Loading5S from '../../component/Loading5S';
 import { translate } from '../../i18n/src/locales';
@@ -79,7 +79,9 @@ const Login = (props) => {
                                 dispatch({ type: 'CHANGE_USERDATA', userData: pc });
                                 setLoading(false);
 
-                                navigation.navigate('Dashboard');
+                                setDados(`Paciente/${paciente.Codigo}/Conectado`,true).then(response=>{
+                                    navigation.navigate('Dashboard');
+                                });
                             });
 
                         } else {
@@ -200,7 +202,7 @@ const Login = (props) => {
                     console.log(error);
                 });
             }}
-            closeDialog={() => { showDialog(false) }}>
+            closeDialog={() => { setIsOpen(false) }}>
         </DialogInput>
     </View>
 };

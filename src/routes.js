@@ -14,6 +14,7 @@ import RegraDaMao from './pages/regradamao';
 import Ouvidoria from './pages/ouvidoria';
 import CameraView from './pages/perfil/camera';
 import LivrosReceitas from './pages/livros';
+import Exercicos from './pages/exercicios';
 
 const Stack = createStackNavigator();
 
@@ -95,6 +96,12 @@ const Routes = () => {
             <Stack.Screen
                 name="LivrosReceitas"
                 component={LivrosReceitas}
+                options={{
+                    headerShown: false
+                }} />
+            <Stack.Screen
+                name="Exercicios"
+                component={Exercicos}
                 options={{
                     headerShown: false
                 }} />

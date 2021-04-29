@@ -82,21 +82,21 @@ function Dashboard(props) {
             <View style={mainStyles.cardInfo}>
                 <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center', marginRight: 5, borderRightColor: '#f4f4f4', borderRightWidth: 2 }}>
                     <Text style={{ fontSize: 13 }}>Peso Inicial</Text>
-                    <Text style={{ fontSize: 20, color: '#676838' }}>{paciente.PesoInicial}</Text>
+                    <Text style={{ fontSize: 20, color: '#ffffff' }}>{paciente.PesoInicial}</Text>
                 </View>
                 <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center' }}>
                     <Text style={{ fontSize: 13, }}>Peso Atual</Text>
-                    <Text style={{ fontSize: 20, color: '#676838' }}>{paciente.PesoAtual}</Text>
+                    <Text style={{ fontSize: 20, color: '#ffffff' }}>{paciente.PesoAtual}</Text>
                 </View>
             </View>
             <View style={mainStyles.cardInfo}>
                 <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center', borderRightColor: '#f4f4f4', borderRightWidth: 2 }}>
-                    <Text style={{ fontSize: 13, color: '#666666' }}>Meta Kg</Text>
-                    <Text style={{ fontSize: 20, color: '#676838' }}>{paciente.MetaKg}</Text>
+                    <Text style={{ fontSize: 13, color: '#000000' }}>Meta Kg</Text>
+                    <Text style={{ fontSize: 20, color: '#ffffff' }}>{paciente.MetaKg}</Text>
                 </View>
                 <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center' }}>
-                    <Text style={{ fontSize: 13, color: '#666666' }}>Peso Previsto</Text>
-                    <Text style={{ fontSize: 20, color: '#676838' }}>{(parseFloat(paciente.PesoInicial) - (parseFloat(paciente.MetaKg) * -1)).toFixed(2)}</Text>
+                    <Text style={{ fontSize: 13, color: '#000000' }}>Peso Previsto</Text>
+                    <Text style={{ fontSize: 20, color: '#ffffff' }}>{(parseFloat(paciente.PesoInicial) - (parseFloat(paciente.MetaKg) * -1)).toFixed(2)}</Text>
                 </View>
             </View>
             <Loading5S
