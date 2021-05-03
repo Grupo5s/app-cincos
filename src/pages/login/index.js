@@ -44,11 +44,12 @@ const Login = (props) => {
             singleAlert('Login', translate('TYPE_PASSWORD'));
         } else {
             setLoading(true);
+            console.log(playerID);
             autenticarComEmailSenha(email, senha)
                 .then(async response => {
 
                     const credentials = response;
-                    console.log(credentials.user.uid);
+                    //console.log(credentials.user.uid);
 
                     atualizarUid(credentials.user.uid, email).then(response => { }).catch(error => {
                         console.log(error);

@@ -8,6 +8,7 @@
 
 import React from 'react';
 import {
+  SafeAreaView,
   StatusBar,
 } from 'react-native';
 import { Provider } from 'react-redux';
@@ -17,14 +18,14 @@ import { persistor, store } from './src/store';
 
 const App = () => {
   return (
-    <>
-      <StatusBar/>
+    <SafeAreaView style={{ flex: 1 }}>
+      <StatusBar />
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <Routes/>
+          <Routes />
         </PersistGate>
       </Provider>
-    </>
+    </SafeAreaView>
   );
 };
 
