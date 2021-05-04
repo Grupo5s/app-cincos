@@ -11,7 +11,7 @@ function PostBody({ post, styles }) {
             await getFeaturedMedia(post.featured_media).then(response => {
                 var featuredMediaSrc = response.data;
                 if (callback)
-                    callback.call(this, `https://www.5sgrupo.com.br${featuredMediaSrc.source_url}`);
+                    callback.call(this, `http://5sgrupo.azurewebsites.net${featuredMediaSrc.source_url}`);
             });
         };
 

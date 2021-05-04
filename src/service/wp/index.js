@@ -5,11 +5,13 @@ const wpApiOld = axios.create({
 });
 
 const wpApi = axios.create({
-    baseURL: 'https://www.5sgrupo.com.br/wp-json/wp/v2/'
+    //baseURL: 'https://www.5sgrupo.com.br/wp-json/wp/v2/'
+    baseURL: 'http://5sgrupo.azurewebsites.net/wp-json/wp/v2/',
 });
 
 const wpApiFeaturedMedia = axios.create({
-    baseURL: 'https://www.5sgrupo.com.br/wp-json/wp/v2/media/'
+    //baseURL: 'https://www.5sgrupo.com.br/wp-json/wp/v2/media/'
+    baseURL: 'http://5sgrupo.azurewebsites.net/wp-json/wp/v2/media/',
 });
 
 const getCategories = function() {

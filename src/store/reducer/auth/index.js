@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-    versao: 12,
+    versao: 13,
     conectado: false,
     uid: '',
     codigoPaciente: 0,

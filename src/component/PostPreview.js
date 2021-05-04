@@ -8,7 +8,7 @@ function PostPreview({ id, title, image, styles, featuredMediaID, onPress }) {
             await getFeaturedMedia(featuredMediaID).then(response=>{
                 var featuredMediaSrc = response.data;
                 if(callback)
-                    callback.call(this,`https://www.5sgrupo.com.br${featuredMediaSrc.source_url}`);
+                    callback.call(this,`http://5sgrupo.azurewebsites.net${featuredMediaSrc.source_url}`);
             });
         };
 

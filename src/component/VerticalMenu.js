@@ -56,9 +56,9 @@ function VerticalMenu(props) {
             <TouchableOpacity onPress={() => navigation.navigate('Bioimpedancia')}>
                 <Icon name="bar-chart" size={22} style={page == 'bioimpedancia' ? mainStyles.iconActive : mainStyles.iconInactive} />
             </TouchableOpacity>
-            {/*<TouchableOpacity onPress={() => navigation.navigate('Receitas')}>
+            <TouchableOpacity onPress={() => navigation.navigate('Receitas')}>
                 <Icon name="book" size={22} style={page == 'receitas' ? mainStyles.iconActive : mainStyles.iconInactive} />
-            </TouchableOpacity>*/}
+            </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('Exercicios')}>
                 <Icon name="heartbeat" size={22} style={page == 'exercicios' ? mainStyles.iconActive : mainStyles.iconInactive} />
             </TouchableOpacity>

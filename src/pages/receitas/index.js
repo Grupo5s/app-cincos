@@ -81,7 +81,8 @@ function Receitas(props) {
             setReceitasFaseSubCategoriasPost(post);
             getFeaturedMedia(post.featured_media).then(response => {
                 var featuredMedia = response.data;
-                imageRef.current = `https://www.5sgrupo.com.br${featuredMedia.source_url}`;
+                imageRef.current = `http://5sgrupo.azurewebsites.net${featuredMedia.source_url}`;
+                //imageRef.current = `https://www.5sgrupo.com.br${featuredMedia.source_url}`;
             });
 
             setShowSubcategorias(false);
