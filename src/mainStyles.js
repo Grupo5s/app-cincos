@@ -139,7 +139,7 @@ const mainStyles = StyleSheet.create({
         padding: 20,
         borderRadius: 10,
         shadowColor: '#000000',
-        shadowOpacity: 100
+        shadowOpacity: 0
     },
     cardInfo: {
         marginBottom: 10,
@@ -150,7 +150,7 @@ const mainStyles = StyleSheet.create({
         padding: 20,
         borderRadius: 10,
         shadowColor: '#000000',
-        shadowOpacity: 100
+        shadowOpacity: 0
     },
     cardFoto: {
         flexDirection: 'column',
@@ -162,7 +162,7 @@ const mainStyles = StyleSheet.create({
         padding: 40,
         borderRadius: 50,
         shadowColor: '#000000',
-        shadowOpacity: 200
+        shadowOpacity: 0
     },
     line: { 
         width: '100%', 
