@@ -19,7 +19,6 @@ import { persistor, store } from './src/store';
 const App = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <StatusBar />
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <Routes />
