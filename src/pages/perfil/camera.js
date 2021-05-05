@@ -41,25 +41,8 @@ export default function CameraView({ navigation }) {
                         navigation.navigate('Perfil');
                     });
                 });
-                /*await ImageManipulator
-                    .manipulateAsync(photoUri, [{ resize: { width: 400, height: 400 } }], { base64: true })
-                    .then(image => {
-                        var image64 = image.base64;
-                        setFoto(`Paciente/${authReducer.codigoPaciente}`, image64).then(response=>{
-                            navigation.navigate('Perfil');
-                        }).catch(error=>{
-                            Alert.alert('Foto','Tente novamente');
-                        });
-                        
-                    })
-                    .catch(error => {
-                        console.log(error);
-                        singleAlert('Ops', 'Não foi possível capturar a foto!');
-                    });*/
             });
 
-        } else {
-            console.log(camera);
         }
     }
 

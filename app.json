@@ -3,6 +3,6 @@
   "displayName": "cincos",
   "android":{
     "package":"com.cincos",
-    "versionCode": 13
+    "versionCode": 19
   }
 }

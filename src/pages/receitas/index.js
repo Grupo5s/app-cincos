@@ -43,10 +43,8 @@ function Receitas(props) {
     const [imagens, setImagens] = useState([]);
 
     function obterReceitasFaseID() {
-        console.log(paciente);
         obterDados(`Receitas/${paciente.Receitas}`).on('value', snapshot => {
             var infoReceita = snapshot.val();
-            console.log(infoReceita);
             setLoading(false);
             setReceitasFaseID(infoReceita);
         });
@@ -81,8 +79,7 @@ function Receitas(props) {
             setReceitasFaseSubCategoriasPost(post);
             getFeaturedMedia(post.featured_media).then(response => {
                 var featuredMedia = response.data;
-                imageRef.current = `http://5sgrupo.azurewebsites.net${featuredMedia.source_url}`;
-                //imageRef.current = `https://www.5sgrupo.com.br${featuredMedia.source_url}`;
+                imageRef.current = `https://www.5sgrupo.com.br${featuredMedia.source_url}`;
             });
 
             setShowSubcategorias(false);
@@ -197,7 +194,6 @@ function Receitas(props) {
                             /* https://www.5sgrupo.com.br/wp-content/uploads/2020/10/ */
                             var slug = subcategoria.slug;
                             var arrSlug = slug.split('-');
-                            console.log(subcategoria.id);
                             return <TouchableOpacity
                                 key={subcategoria.id}
                                 onPress={() => getSubcategoriaPosts(subcategoria.id)}>

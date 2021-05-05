@@ -18,12 +18,9 @@ function Duvidas(props) {
         setLoading(true);
         getOlderPost(3367).then(response => {
             const texto = response.data;
-            console.log(texto);
             setPost(texto);
             setLoading(false);
-        }).catch(error=>{
-            console.log(error);
-        })
+        }).catch(error=>{})
     }, []);
 
     return <>

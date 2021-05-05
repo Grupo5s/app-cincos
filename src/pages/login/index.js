@@ -11,6 +11,7 @@ import { atualizarPlayerID, atualizarUid, obterFicha } from '../../service/pacie
 import Loading5S from '../../component/Loading5S';
 import { translate } from '../../i18n/src/locales';
 import DialogInput from 'react-native-dialog-input';
+import global from '../../constants';
 
 const Login = (props) => {
 
@@ -44,16 +45,12 @@ const Login = (props) => {
             singleAlert('Login', translate('TYPE_PASSWORD'));
         } else {
             setLoading(true);
-            console.log(playerID);
             autenticarComEmailSenha(email, senha)
                 .then(async response => {
 
                     const credentials = response;
-                    //console.log(credentials.user.uid);
 
-                    atualizarUid(credentials.user.uid, email).then(response => { }).catch(error => {
-                        console.log(error);
-                    });
+                    atualizarUid(credentials.user.uid, email).then(response => { }).catch(error => {});
 
                     obterFicha({
                         Email: email,
@@ -66,9 +63,7 @@ const Login = (props) => {
                             atualizarPlayerID({
                                 Uid: credentials.user.uid,
                                 PlayerID: playerID
-                            }).then(response => {
-                                console.log(response);
-                            });
+                            }).then(response => {});
 
                             obterDados(`Paciente/${paciente.Codigo}`).once('value', (snapshot) => {
 
@@ -106,7 +101,6 @@ const Login = (props) => {
                         }
 
                     }).catch(error => {
-                        console.log(error);
                         setLoading(false);
                         singleAlert('5S', translate('MSG_FICHA_ERROR'));
                     });
@@ -135,7 +129,6 @@ const Login = (props) => {
 
     function openDialog() {
         setIsOpen(true);
-        console.log(isOpen);
     }
 
     useEffect(() => {
@@ -183,7 +176,7 @@ const Login = (props) => {
                 <Text>{translate('PRIVACY_TERMS')}</Text>
             </TouchableOpacity>
             <View style={{ backgroundColor: 'transparent', padding: 10, marginTop: 10 }}>
-                <Text style={{ fontSize: 12, color: '#999999', textAlign: 'center' }}>versão 2.0 ({authReducer.versao})</Text>
+                <Text style={{ fontSize: 12, color: '#999999', textAlign: 'center' }}>{global.versao}</Text>
             </View>
         </View>
         <DialogInput isDialogVisible={isOpen}
@@ -198,10 +191,7 @@ const Login = (props) => {
                 enviarEmailRedefinicaoSenha(email).then(response=>{
                     setLoading(false);
                     singleAlert('Redefinir Senha','E-mail de redefinicação de senha enviado com sucesso.');
-                }).catch(error=>{
-                    setLoading(false);
-                    console.log(error);
-                });
+                }).catch(error=>{});
             }}
             closeDialog={() => { setIsOpen(false) }}>
         </DialogInput>

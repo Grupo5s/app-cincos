@@ -3,8 +3,6 @@ import { useSelector } from 'react-redux';
 import { View, Image, Text, TouchableOpacity, ScrollView, Linking } from 'react-native';
 import mainStyles from '../../mainStyles';
 import VerticalMenu from '../../component/VerticalMenu';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import styles from './styles';
 import PageTitle from '../../component/PageTitle';
 import img1 from '../../assets/img1.png';
 import img2 from '../../assets/img2.png';

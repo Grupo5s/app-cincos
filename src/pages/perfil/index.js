@@ -27,9 +27,9 @@ function Perfil(props) {
         setPaciente(authReducer.userData);
     }, []);
 
-    useEffect(()=>{
+    useEffect(() => {
         setPaciente(authReducer.userData);
-    },[authReducer.userData]);
+    }, [authReducer.userData]);
 
     return <View style={mainStyles.layout}>
         <VerticalMenu page="perfil" navigation={navigation} />
@@ -38,7 +38,7 @@ function Perfil(props) {
             <View style={styles.viewUserPhoto}>
                 <TouchableOpacity onPress={() => navigation.navigate('CameraView')} style={styles.viewPhoto}>
                     <View style={mainStyles.cardFoto}>
-                        {paciente.UrlFoto == '' && <Image source={userNoPhoto} />}
+                        {paciente.UrlFoto == '' && <Image source={userNoPhoto} style={{ width: 76, height: 76, borderRadius: 100 }} />}
                         {paciente.UrlFoto != '' && <Image source={{ uri: `data:image/gif;base64,${paciente.UrlFoto}` }} style={{ width: 76, height: 76, borderRadius: 100 }} />}
                     </View>
                 </TouchableOpacity>
@@ -114,9 +114,7 @@ function Perfil(props) {
                     showDialog(false);
                     singleAlert('Dados', 'Senha alterada com sucesso.');
                 })
-                    .catch(error => {
-                        console.log(error);
-                    });
+                .catch(error => { });
             }}
 
             closeDialog={() => { showDialog(false) }}>

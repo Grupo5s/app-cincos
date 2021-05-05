@@ -54,7 +54,7 @@ function Bioimpedancia(props) {
 
     useEffect(() => {
         async function loadBioimpedancia(callback) {
-            console.log('imcData', uid);
+
             await apiPaciente.obterBioimpedancia(uid).then(response => {
                 const bios = response.data;
                 bios.forEach(bio => {
@@ -72,8 +72,6 @@ function Bioimpedancia(props) {
                 if (callback)
                     callback.call(this, arrAguaCorporal, arrGorduraVisceral, arrIdadeMetabolica, arrImc, arrMassaGorda, arrMassaMagra, arrPesoKg, arrTaxaMetabolicaBasal);
 
-
-                //console.log('imcData',imcData);
             });
 
 

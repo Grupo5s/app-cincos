@@ -8,6 +8,7 @@ import { atualizarPlayerID, obterResumoTratamento } from '../../service/paciente
 import PageTitle from '../../component/PageTitle';
 import Loading5S from '../../component/Loading5S';
 import { useSelector } from 'react-redux';
+import global from '../../constants';
 
 function Dashboard(props) {
 
@@ -28,9 +29,7 @@ function Dashboard(props) {
         atualizarPlayerID({
             Uid: authReducer.uid,
             PlayerID: authReducer.playerId
-        }).then(response => {
-            console.log(response);
-        });
+        }).then(response => {});
 
         obterResumoTratamento(authReducer.codigoPaciente).then(response => {
             const resumo = response.data;
@@ -39,7 +38,7 @@ function Dashboard(props) {
         });
         setTimeout(()=>{
             setLoading(false);
-        },1000);
+        },500);
     }, []);
 
     useEffect(() => {
@@ -104,7 +103,7 @@ function Dashboard(props) {
                 color="#bbbe00"
                 overlayColor="rgba(255,255,255,0.80)" />
             <View style={{ backgroundColor: 'transparent', padding: 10, marginTop: 10 }}>
-                <Text style={{ fontSize: 12, color: '#999999', textAlign: 'center' }}>versão 2.0 ({authReducer.versao})</Text>
+                <Text style={{ fontSize: 12, color: '#999999', textAlign: 'center' }}>{global.versao}</Text>
             </View>
         </ScrollView>
     </View>
