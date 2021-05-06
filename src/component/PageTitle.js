@@ -16,7 +16,7 @@ function PageTitle({ title, showLogo = false }) {
                 <TouchableOpacity style={{marginRight: 20, marginTop: 16}}>
                     <Icon name="envelope" size={16} style={{color: 'gray'}}/>
                 </TouchableOpacity>*/}
-                {showLogo && <Image source={logo} style={{ width: 50, height: 50 }} />}
+                {showLogo && <Image source={logo} style={{ width: 100, height: 100 }} />}
             </View>
         </View>
         <Image source={linha} style={mainStyles.line} />

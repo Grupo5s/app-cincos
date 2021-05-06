@@ -106,9 +106,9 @@ function Bioimpedancia(props) {
                     width={Dimensions.get('window').width - 60} // from react-native
                     height={220}
                     chartConfig={{
-                        backgroundColor: '#e26a00',
-                        backgroundGradientFrom: '#fb8c00',
-                        backgroundGradientTo: '#ffa726',
+                        backgroundColor: '#ffffff',
+                        backgroundGradientFrom: '#BCBF00',
+                        backgroundGradientTo: '#4F4C25',
                         decimalPlaces: 2, // optional, defaults to 2dp
                         color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
                         style: {
@@ -131,9 +131,9 @@ function Bioimpedancia(props) {
                     width={Dimensions.get('window').width - 60} // from react-native
                     height={220}
                     chartConfig={{
-                        backgroundColor: '#e26a00',
-                        backgroundGradientFrom: '#fb8c00',
-                        backgroundGradientTo: '#ffa726',
+                        backgroundColor: '#ffffff',
+                        backgroundGradientFrom: '#BCBF00',
+                        backgroundGradientTo: '#4F4C25',
                         decimalPlaces: 2, // optional, defaults to 2dp
                         color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
                         style: {
@@ -156,9 +156,9 @@ function Bioimpedancia(props) {
                     width={Dimensions.get('window').width - 60} // from react-native
                     height={220}
                     chartConfig={{
-                        backgroundColor: '#e26a00',
-                        backgroundGradientFrom: '#fb8c00',
-                        backgroundGradientTo: '#ffa726',
+                        backgroundColor: '#ffffff',
+                        backgroundGradientFrom: '#BCBF00',
+                        backgroundGradientTo: '#4F4C25',
                         decimalPlaces: 2, // optional, defaults to 2dp
                         color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
                         style: {
@@ -181,9 +181,9 @@ function Bioimpedancia(props) {
                     width={Dimensions.get('window').width - 60} // from react-native
                     height={220}
                     chartConfig={{
-                        backgroundColor: '#e26a00',
-                        backgroundGradientFrom: '#fb8c00',
-                        backgroundGradientTo: '#ffa726',
+                        backgroundColor: '#ffffff',
+                        backgroundGradientFrom: '#BCBF00',
+                        backgroundGradientTo: '#4F4C25',
                         decimalPlaces: 2, // optional, defaults to 2dp
                         color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
                         style: {
@@ -205,9 +205,9 @@ function Bioimpedancia(props) {
                     width={Dimensions.get('window').width - 60} // from react-native
                     height={220}
                     chartConfig={{
-                        backgroundColor: '#e26a00',
-                        backgroundGradientFrom: '#fb8c00',
-                        backgroundGradientTo: '#ffa726',
+                        backgroundColor: '#ffffff',
+                        backgroundGradientFrom: '#BCBF00',
+                        backgroundGradientTo: '#4F4C25',
                         decimalPlaces: 2, // optional, defaults to 2dp
                         color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
                         style: {
@@ -229,9 +229,9 @@ function Bioimpedancia(props) {
                     width={Dimensions.get('window').width - 60} // from react-native
                     height={220}
                     chartConfig={{
-                        backgroundColor: '#e26a00',
-                        backgroundGradientFrom: '#fb8c00',
-                        backgroundGradientTo: '#ffa726',
+                        backgroundColor: '#ffffff',
+                        backgroundGradientFrom: '#BCBF00',
+                        backgroundGradientTo: '#4F4C25',
                         decimalPlaces: 2, // optional, defaults to 2dp
                         color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
                         style: {
@@ -253,9 +253,9 @@ function Bioimpedancia(props) {
                     width={Dimensions.get('window').width - 60} // from react-native
                     height={220}
                     chartConfig={{
-                        backgroundColor: '#e26a00',
-                        backgroundGradientFrom: '#fb8c00',
-                        backgroundGradientTo: '#ffa726',
+                        backgroundColor: '#ffffff',
+                        backgroundGradientFrom: '#BCBF00',
+                        backgroundGradientTo: '#4F4C25',
                         decimalPlaces: 2, // optional, defaults to 2dp
                         color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
                         style: {
@@ -277,9 +277,9 @@ function Bioimpedancia(props) {
                     width={Dimensions.get('window').width - 60} // from react-native
                     height={220}
                     chartConfig={{
-                        backgroundColor: '#e26a00',
-                        backgroundGradientFrom: '#fb8c00',
-                        backgroundGradientTo: '#ffa726',
+                        backgroundColor: '#ffffff',
+                        backgroundGradientFrom: '#BCBF00',
+                        backgroundGradientTo: '#4F4C25',
                         decimalPlaces: 2, // optional, defaults to 2dp
                         color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
                         style: {

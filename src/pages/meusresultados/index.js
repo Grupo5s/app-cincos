@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useContext } from 'react';
-import { View, Image, Text, TouchableOpacity, TextInput, Alert } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Image, Text, TouchableOpacity, TextInput, Alert, Platform } from 'react-native';
 import mainStyles from '../../mainStyles';
 import VerticalMenu from '../../component/VerticalMenu';
 import linha from '../../assets/linha.png';
@@ -130,14 +130,14 @@ function MeusResultados(props) {
                     <TextInput
                         placeholder="Peso"
                         style={mainStyles.inputPesoFull}
-                        keyboardType="numeric"
+                        keyboardType={Platform.OS == "android" ? 'numeric' : 'default' }
                         value={pesoHoje}
                         onChangeText={(text) => { setPesoHoje(text); }} />
                     <View style={{ flexDirection: 'row', backgroundColor: '#fdffb6', padding: 10, marginBottom: 10, color: 'orange' }}>
                         <Icon name="warning" style={{ padding: 10, color: 'orange' }} size={25} />
                         <View style={{ flexDirection: 'column', marginLeft: 8 }}>
-                            <Text style={{ fontSize: 14, color: 'orange', fontWeight: 'bold' }}>Mandou o peso errado!</Text>
-                            <Text style={{ fontSize: 12, color: 'orange', fontWeight: 'bold' }}>Basta enviar novamente para corrigir.</Text>
+                            <Text style={{ fontSize: 14, color: 'orange', fontWeight: 'bold' }}>Caso envie o peso errado, </Text>
+                            <Text style={{ fontSize: 12, color: 'orange', fontWeight: 'bold' }}>basta enviar aqui novamente.</Text>
                         </View>
                     </View>
 
