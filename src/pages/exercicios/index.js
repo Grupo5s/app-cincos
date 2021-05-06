@@ -15,18 +15,20 @@ function Exercicios(props) {
         <VerticalMenu page="exercicios" navigation={navigation} />
         <View style={mainStyles.viewRecuoImg}>
             <PageTitle title="EXERCÍCIOS" showLogo={true} />
-            <Image source={img1} style={{ width: '100%', height: 320 }} />
-            <TouchableOpacity
-                activeOpacity={1}
-                onPress={() => Linking.openURL('https://freefitness.com.br/grupo-5s')}>
-                <Image source={img2} style={{ width: '100%', height: 120 }} />
-            </TouchableOpacity>
-            <TouchableOpacity
-                activeOpacity={1}
-                onPress={() => Linking.openURL('https://ptgustavo.com.br/grupo-5s')}>
-                <Image source={img3} style={{ width: '100%', height: 120 }} />
-            </TouchableOpacity>
-            <Image source={img4} style={{ width: '100%', height: 120 }} />
+            <ScrollView>
+                <Image source={img1} style={{ width: '100%', height: 320 }} />
+                <TouchableOpacity
+                    activeOpacity={1}
+                    onPress={() => Linking.openURL('https://freefitness.com.br/grupo-5s')}>
+                    <Image source={img2} style={{ width: '100%', height: 120 }} />
+                </TouchableOpacity>
+                <TouchableOpacity
+                    activeOpacity={1}
+                    onPress={() => Linking.openURL('https://ptgustavo.com.br/grupo-5s')}>
+                    <Image source={img3} style={{ width: '100%', height: 120 }} />
+                </TouchableOpacity>
+                <Image source={img4} style={{ width: '100%', height: 120 }} />
+            </ScrollView>
         </View>
     </View>
 }
