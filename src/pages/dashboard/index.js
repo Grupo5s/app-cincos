@@ -9,6 +9,7 @@ import PageTitle from '../../component/PageTitle';
 import Loading5S from '../../component/Loading5S';
 import { useSelector } from 'react-redux';
 import global from '../../constants';
+import { obterDados } from '../../service/firebase';
 
 function Dashboard(props) {
 
@@ -17,6 +18,8 @@ function Dashboard(props) {
     const authReducer = useSelector(state => state.authReducer);
 
     const [paciente, setPaciente] = useState({});
+    const [pesoAtual,setPesoAtual] = useState(0);
+
     const [loading, setLoading] = useState(false);
 
     const [data, setData] = useState(new Date().toISOString().split('T')[0].split('-').reverse().join('/'));
@@ -25,20 +28,26 @@ function Dashboard(props) {
     useEffect(() => {
         setLoading(true);
         setPaciente(authReducer.userData);
-        
+
         atualizarPlayerID({
             Uid: authReducer.uid,
             PlayerID: authReducer.playerId
-        }).then(response => {});
+        }).then(response => { });
 
         obterResumoTratamento(authReducer.codigoPaciente).then(response => {
             const resumo = response.data;
             setResumoTratamento(resumo);
+
+            obterDados(`Paciente/${authReducer.codigoPaciente}`).on('value',snapshot=>{
+                var pc = snapshot.val();
+                setPesoAtual(pc.PesoAtual);
+            });
+
             setLoading(false);
         });
-        setTimeout(()=>{
+        setTimeout(() => {
             setLoading(false);
-        },500);
+        }, 500);
     }, []);
 
     useEffect(() => {
@@ -85,7 +94,7 @@ function Dashboard(props) {
                 </View>
                 <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center' }}>
                     <Text style={{ fontSize: 13, }}>Peso Atual</Text>
-                    <Text style={{ fontSize: 20, color: '#ffffff' }}>{paciente.PesoAtual}</Text>
+                    <Text style={{ fontSize: 20, color: '#ffffff' }}>{pesoAtual}</Text>
                 </View>
             </View>
             <View style={mainStyles.cardInfo}>
