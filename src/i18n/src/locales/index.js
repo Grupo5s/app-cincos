@@ -7,10 +7,24 @@ import pt from './pt-BR' // importa o objeto de traduções para o idioma portug
 // Isso é necessário pois no android e no iOS o retorno do mesmo idioma pode ser diferente
 // Exemplo: no iOS podemos receber pt_US e no android pt_BR para o idioma português Brasil.
 const normalizeTranslate = {
-  'en_US': 'en_US',
-  'pt_BR': 'pt_BR',
   'en': 'en_US',
-  'pt_US': 'pt_BR',
+  'en_AU': 'en_US',
+  'en_BZ': 'en_US',
+  'en_BW': 'en_US',
+  'en_CA': 'en_US',
+  'en_CB': 'en_US',
+  'en_DK': 'en_US',
+  'en_IE': 'en_US',
+  'en_JM': 'en_US',
+  'en_NZ': 'en_US',
+  'en_PH': 'en_US',
+  'en_ZA': 'en_US',
+  'en_TT': 'en_US',
+  'en_GB': 'en_US',
+  'en_US': 'en_US',
+  'en_ZW': 'en_US',
+  'pt_BR': 'pt_BR',
+  'pt_PT': 'pt_BR',
 }
 
 // Função responsável por adquirir o idioma utilizado no device
