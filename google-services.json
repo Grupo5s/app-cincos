@@ -1,0 +1,163 @@
+{
+  "project_info": {
+    "project_number": "851896440244",
+    "firebase_url": "https://app5s-ac366.firebaseio.com",
+    "project_id": "app5s-ac366",
+    "storage_bucket": "app5s-ac366.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851896440244:android:65910ff39b46bdd3920ee1",
+        "android_client_info": {
+          "package_name": "br.com.app5s"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851896440244-h3ii32nth2ah92aegojfc5jp9sna2glj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCphgrKYuhtQEwS3Tht1Sdlrozizf92b3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105189933524956954299",
+              "client_type": 3
+            },
+            {
+              "client_id": "851896440244-49g9626aekbaj1cj5evjeoa525djv2ni.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.brands5s"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851896440244:android:c710cbd35a4d0985",
+        "android_client_info": {
+          "package_name": "br.com.e5s"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851896440244-n9vc3ri8eiqo37vn7m2bfhtf8boqmvae.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.e5s",
+            "certificate_hash": "ad7e03c66eda5af12c343339ebe455ffd5368bed"
+          }
+        },
+        {
+          "client_id": "851896440244-h3ii32nth2ah92aegojfc5jp9sna2glj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCphgrKYuhtQEwS3Tht1Sdlrozizf92b3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105189933524956954299",
+              "client_type": 3
+            },
+            {
+              "client_id": "851896440244-49g9626aekbaj1cj5evjeoa525djv2ni.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.brands5s"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851896440244:android:7078796e05b3a225920ee1",
+        "android_client_info": {
+          "package_name": "com.app5s"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851896440244-h3ii32nth2ah92aegojfc5jp9sna2glj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCphgrKYuhtQEwS3Tht1Sdlrozizf92b3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105189933524956954299",
+              "client_type": 3
+            },
+            {
+              "client_id": "851896440244-49g9626aekbaj1cj5evjeoa525djv2ni.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.brands5s"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851896440244:android:7a6188d6b626e02b920ee1",
+        "android_client_info": {
+          "package_name": "com.cincos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851896440244-h3ii32nth2ah92aegojfc5jp9sna2glj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCphgrKYuhtQEwS3Tht1Sdlrozizf92b3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105189933524956954299",
+              "client_type": 3
+            },
+            {
+              "client_id": "851896440244-49g9626aekbaj1cj5evjeoa525djv2ni.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.brands5s"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
