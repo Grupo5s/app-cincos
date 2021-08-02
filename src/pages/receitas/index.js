@@ -110,6 +110,8 @@ function Receitas(props) {
     useEffect(() => {
         setLoading(true);
         setPaciente(authReducer.userData);
+
+        console.log(authReducer.userData);
     }, []);
 
     useEffect(()=>{
@@ -152,12 +154,12 @@ function Receitas(props) {
                     <Text></Text>
                     <TouchableOpacity
                         style={mainStyles.buttonDefault}
-                        onPress={() => { obterSubCategorias(receitasFaseID.WP_CAT_DESINTOXICACAO_ID) }}>
+                        onPress={() => { obterSubCategoriasFase(receitasFaseID.WP_CAT_DESINTOXICACAO_ID) }}>
                         <Text>Desintoxicação</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={mainStyles.buttonDefault}
-                        onPress={() => { obterSubCategorias(receitasFaseID.WP_CAT_REPROGRAMACAO_ID) }}>
+                        onPress={() => { obterSubCategoriasFase(receitasFaseID.WP_CAT_REPROGRAMACAO_ID) }}>
                         <Text>Reprogramação</Text>
                     </TouchableOpacity>
                 </>}
@@ -197,13 +199,13 @@ function Receitas(props) {
                             return <TouchableOpacity
                                 key={subcategoria.id}
                                 onPress={() => getSubcategoriaPosts(subcategoria.id)}>
-                                {(arrSlug[0] == 'cafe') && <Image resizeMode="stretch" source={capaCafeManha} style={{ width: 350, height: 180, marginBottom: 10 }} />}
-                                {(arrSlug[0] == 'almoco') && <Image resizeMode="stretch" source={almoco} style={{ width: 350, height: 180, marginBottom: 10 }} />}
-                                {(arrSlug[0] == 'jantar') && <Image resizeMode="stretch" source={jantar} style={{ width: 350, height: 180, marginBottom: 10 }} />}
-                                {(arrSlug[0] == 'sucos') && <Image resizeMode="stretch" source={sucos} style={{ width: 350, height: 180, marginBottom: 10 }} />}
-                                {(arrSlug[0] == 'sobremesas') && <Image resizeMode="stretch" source={sobremesas} style={{ width: 350, height: 180, marginBottom: 10 }} />}
-                                {(arrSlug[0] == 'chas') && <Image resizeMode="stretch" source={chas} style={{ width: 350, height: 180, marginBottom: 10 }} />}
-                                {(arrSlug[0] == 'sopas') && <Image resizeMode="stretch" source={sopas} style={{ width: 350, height: 180, marginBottom: 10 }} />}
+                                {(arrSlug[0] == 'cafe') && <Image resizeMode="stretch" source={capaCafeManha} style={{ width: 490, height: 250, marginBottom: 10 }} />}
+                                {(arrSlug[0] == 'almoco') && <Image resizeMode="stretch" source={almoco} style={{ width: 490, height: 250, marginBottom: 10 }} />}
+                                {(arrSlug[0] == 'jantar') && <Image resizeMode="stretch" source={jantar} style={{ width: 490, height: 250, marginBottom: 10 }} />}
+                                {(arrSlug[0] == 'sucos') && <Image resizeMode="stretch" source={sucos} style={{ width: 490, height: 250, marginBottom: 10 }} />}
+                                {(arrSlug[0] == 'sobremesas') && <Image resizeMode="stretch" source={sobremesas} style={{ width: 490, height: 250, marginBottom: 10 }} />}
+                                {(arrSlug[0] == 'chas') && <Image resizeMode="stretch" source={chas} style={{ width: 490, height: 250, marginBottom: 10 }} />}
+                                {(arrSlug[0] == 'sopas') && <Image resizeMode="stretch" source={sopas} style={{ width: 490, height: 250, marginBottom: 10 }} />}
                             </TouchableOpacity>;
                         })}
                     </View>

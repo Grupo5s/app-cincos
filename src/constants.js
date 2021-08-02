@@ -1,4 +1,4 @@
 const global = {
-    versao: 'versão 2.0 (22)'
+    versao: 'versão 2.0 (23)'
 }
 export default global;
