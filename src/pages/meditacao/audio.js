@@ -10,24 +10,20 @@ import Sound from 'react-native-sound';
 import Loading5S from '../../component/Loading5S';
 import * as FirebaseService from '../../service/firebase';
 import FEIcon from 'react-native-vector-icons/Feather';
-import authReducer from '../../store/reducer/auth';
 function MeditacaoAudio(props) {
     const { navigation, route } = props;
     const params = route.params;
 
-    console.log(params);
-
-    const pathAudio = params.pathAudio;
-
     const [audios, setAudios] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [current, setCurrent] = useState(-1);
-
-    const authReducer = useSelector(state => state.authReducer);
 
     const [sound, setSound] = useState(null);
+    const [current, setCurrent] = useState(-1);
 
+
+    const pathAudio = params.pathAudio;
     const dispatch = useDispatch();
+    const authReducer = useSelector(state => state.authReducer);
 
     const playSound = (audio, index) => {
         setLoading(true);
@@ -39,6 +35,7 @@ function MeditacaoAudio(props) {
 
             dispatch({ type: 'CHANGE_CURRENT_SOUND_INDEX', current: -1 });
             dispatch({ type: 'CHANGE_SOUND', sound: null });
+            dispatch({ type: 'CHANGE_SOUND_ORIGEM', soundOrigem: '' });
         }
         audio.getDownloadURL().then(url => {
             var newSound = new Sound(url, null, (e) => {
@@ -49,6 +46,7 @@ function MeditacaoAudio(props) {
                     setCurrent(index);
                     dispatch({ type: 'CHANGE_CURRENT_SOUND_INDEX', current: index });
                     dispatch({ type: 'CHANGE_SOUND', sound: newSound });
+                    dispatch({ type: 'CHANGE_SOUND_ORIGEM', soundOrigem: pathAudio });
 
                     setSound(newSound);
                     setLoading(false);
@@ -69,21 +67,19 @@ function MeditacaoAudio(props) {
     useEffect(() => {
         setLoading(true);
 
-        if (authReducer.sound !== undefined && authReducer.sound !== null) {
-            console.log(authReducer.sound);
-            if (pathAudio === 'audios-bonus') {
-                authReducer.sound.stop();
-                setCurrent(-1);
+        if (pathAudio === 'audios' && authReducer.sound !== undefined && authReducer.sound !== null) {
+            setSound(authReducer.sound);
+            if (authReducer.soundOrigem === 'audios') {
+                setCurrent(authReducer.current);
             } else {
-                if (authReducer.sound !== null) {
-                    setSound(authReducer.sound);
-                    setCurrent(authReducer.current);
-                }
+                setCurrent(-1);
             }
+        }
 
-        } else {
-            if (authReducer.sound !== null) {
-                authReducer.sound.stop();
+        if (pathAudio === 'audios-bonus' && authReducer.sound !== undefined && authReducer.sound !== null) {
+            setSound(authReducer.sound);
+            if (authReducer.soundOrigem === 'audios-bonus') {
+                setCurrent(authReducer.current);
             } else {
                 setCurrent(-1);
             }

@@ -8,6 +8,7 @@ const INITIAL_STATE = {
     playerId: 'playerId',
     current: -1,
     sound: null,
+    soundOrigem: ''
 }
 
 export default function authReducer(state = INITIAL_STATE, action) {
@@ -28,6 +29,9 @@ export default function authReducer(state = INITIAL_STATE, action) {
             return { ...state, sound: action.sound };
         case 'CHANGE_CURRENT_SOUND_INDEX':
             return { ...state, current: action.current };
+        case 'CHANGE_SOUND_ORIGEM':
+            return { ...state, soundOrigem: action.soundOrigem };
+
         default:
             return state;
     }

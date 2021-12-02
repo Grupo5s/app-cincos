@@ -111,6 +111,19 @@ const mainStyles = StyleSheet.create({
         color: '#BCBF00',
         backgroundColor: '#676838'
     },
+    buttonDefaultOutline2: {
+        marginTop: 10,
+        flexDirection: 'row',
+        width: 250,
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        color: '#e4e4e4',
+        borderWidth: 1,
+        marginBottom: 10,
+        borderColor: '#bbbe00',
+        borderRadius: 10,
+        padding: 10
+    },
     iconLogout: {
         width: 40,
         height: 40,
