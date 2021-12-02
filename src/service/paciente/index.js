@@ -4,7 +4,7 @@ function verificarCpf(cpf) {
     return api.get('verificarCpf', { Cpf: cpf, isResponsavel: false });
 }
 
-function atualizarUid(uid,email) {
+function atualizarUid(uid, email) {
     return api.post('paciente/atualizarFirebaseUid', {
         Email: email,
         Uid: uid
@@ -20,6 +20,7 @@ function obterResumoTratamento(codigoPaciente) {
 }
 
 function obterBioimpedancia(uid) {
+    console.log(uid);
     return api.post(`paciente/bioimpedancia`, { Uid: uid });
 }
 
@@ -28,12 +29,12 @@ function obterPerimetria(codigoPaciente) {
 }
 
 
-function enviarMensagemOuvidoria(codigoPaciente,mensagem) {
+function enviarMensagemOuvidoria(codigoPaciente, mensagem) {
     return api.post(`paciente/enviarContato/${codigoPaciente}`, mensagem);
 }
 
 function atualizarPlayerID(usuario) {
-    return api.post(`paciente/atualizarPlayerID`,usuario);
+    return api.post(`paciente/atualizarPlayerID`, usuario);
 }
 
 export { verificarCpf, obterFicha, obterResumoTratamento, obterBioimpedancia, enviarMensagemOuvidoria, atualizarUid, atualizarPlayerID, obterPerimetria }

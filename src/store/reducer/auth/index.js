@@ -5,7 +5,9 @@ const INITIAL_STATE = {
     codigoPaciente: 0,
     userData: {},
     resumoTratamento: {},
-    playerId: 'playerId'
+    playerId: 'playerId',
+    current: -1,
+    sound: null,
 }
 
 export default function authReducer(state = INITIAL_STATE, action) {
@@ -22,6 +24,10 @@ export default function authReducer(state = INITIAL_STATE, action) {
             return { ...state, resumoTratamento: action.resumoTratamento };
         case 'CHANGE_PLAYERID':
             return { ...state, playerId: action.playerId };
+        case 'CHANGE_SOUND':
+            return { ...state, sound: action.sound };
+        case 'CHANGE_CURRENT_SOUND_INDEX':
+            return { ...state, current: action.current };
         default:
             return state;
     }

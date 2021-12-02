@@ -6,7 +6,7 @@ import mainStyles from '../../mainStyles';
 import { singleAlert } from '../../utils/alerts';
 import OneSignal from 'react-native-onesignal';
 import { useDispatch, useSelector } from 'react-redux';
-import { alterarSenha, autenticarComEmailSenha, obterDados,enviarEmailRedefinicaoSenha, setDados } from '../../service/firebase';
+import { alterarSenha, autenticarComEmailSenha, obterDados, enviarEmailRedefinicaoSenha, setDados } from '../../service/firebase';
 import { atualizarPlayerID, atualizarUid, obterFicha } from '../../service/paciente';
 import Loading5S from '../../component/Loading5S';
 import { translate } from '../../i18n/src/locales';
@@ -24,8 +24,8 @@ const Login = (props) => {
     //const [email, setEmail] = useState('bruno@linhaequilibre.com.br');
     //const [senha, setSenha] = useState('123456');
 
-    const [email, setEmail] = useState('');
-    const [senha, setSenha] = useState('');
+    const [email, setEmail] = useState('rosisan_10@hotmail.com');
+    const [senha, setSenha] = useState('Felipe1010');
     const [loading, setLoading] = useState(false);
     const [playerID, setPlayerID] = useState('playerID');
 
@@ -50,7 +50,7 @@ const Login = (props) => {
 
                     const credentials = response;
 
-                    atualizarUid(credentials.user.uid, email).then(response => { }).catch(error => {});
+                    atualizarUid(credentials.user.uid, email).then(response => { }).catch(error => { });
 
                     obterFicha({
                         Email: email,
@@ -63,21 +63,21 @@ const Login = (props) => {
                             atualizarPlayerID({
                                 Uid: credentials.user.uid,
                                 PlayerID: playerID
-                            }).then(response => {});
+                            }).then(response => { });
 
                             obterDados(`Paciente/${paciente.Codigo}`).once('value', (snapshot) => {
 
                                 const pc = snapshot.val();
-
+                                console.log('login => paciente ', pc);
                                 dispatch({ type: 'CHANGE_CONECTADO', conectado: true });
                                 dispatch({ type: 'CHANGE_UID', uid: credentials.user.uid });
                                 dispatch({ type: 'CHANGE_CODIGOPACIENTE', codigoPaciente: paciente.Codigo });
                                 dispatch({ type: 'CHANGE_USERDATA', userData: pc });
                                 setLoading(false);
 
-                                setDados(`Paciente/${paciente.Codigo}/Conectado`,true).then(response=>{
-                                    navigation.navigate('Dashboard');
-                                });
+                                //setDados(`Paciente/${paciente.Codigo}/Conectado`, true).then(response => {
+                                navigation.navigate('Dashboard');
+                                //});
                             });
 
                         } else {
@@ -188,10 +188,10 @@ const Login = (props) => {
             submitInput={(email) => {
                 setIsOpen(false);
                 setLoading(true);
-                enviarEmailRedefinicaoSenha(email).then(response=>{
+                enviarEmailRedefinicaoSenha(email).then(response => {
                     setLoading(false);
-                    singleAlert('Redefinir Senha','E-mail de redefinicação de senha enviado com sucesso.');
-                }).catch(error=>{});
+                    singleAlert('Redefinir Senha', 'E-mail de redefinicação de senha enviado com sucesso.');
+                }).catch(error => { });
             }}
             closeDialog={() => { setIsOpen(false) }}>
         </DialogInput>

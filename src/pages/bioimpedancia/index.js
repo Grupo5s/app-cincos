@@ -21,10 +21,10 @@ const screenWidth = Dimensions.get("window").width;
 function Bioimpedancia(props) {
 
     const { navigation } = props;
-    
-    const authReducer = useSelector(state=>state.authReducer);
 
-    const [uid,setUid] = useState('');
+    const authReducer = useSelector(state => state.authReducer);
+
+    const [uid, setUid] = useState('');
 
     const arrAguaCorporal = [];
     const arrGorduraVisceral = [];
@@ -57,6 +57,7 @@ function Bioimpedancia(props) {
 
             await apiPaciente.obterBioimpedancia(uid).then(response => {
                 const bios = response.data;
+                console.log(bios);
                 bios.forEach(bio => {
                     arrAguaCorporal.push(parseFloat(bio.AguaCorporal));
                     arrGorduraVisceral.push(parseFloat(bio.GorduraVisceral));
@@ -67,25 +68,24 @@ function Bioimpedancia(props) {
                     arrPesoKg.push(parseFloat(bio.PesoKg));
                     arrTaxaMetabolicaBasal.push(parseFloat(bio.TaxaMetabolicaBasal));
                 });
-
+                //console.log(arrImc);
                 setLoading(false);
                 if (callback)
                     callback.call(this, arrAguaCorporal, arrGorduraVisceral, arrIdadeMetabolica, arrImc, arrMassaGorda, arrMassaMagra, arrPesoKg, arrTaxaMetabolicaBasal);
 
             });
 
-
         }
 
         loadBioimpedancia((arrAguaCorporal, arrGorduraVisceral, arrIdadeMetabolica, arrImc, arrMassaGorda, arrMassaMagra, arrPesoKg, arrTaxaMetabolicaBasal) => {
-            setAguaCorporalData(arrAguaCorporal);
-            setGorduraVisceralData(arrGorduraVisceral);
-            setIdadeMetabolicaData(arrIdadeMetabolica);
             setImcData(arrImc);
+            setPesoKgData(arrPesoKg);
             setMassaGordaData(arrMassaGorda);
             setMassaMagraData(arrMassaMagra);
-            setPesoKgData(arrPesoKg);
+            setAguaCorporalData(arrAguaCorporal);
+            setGorduraVisceralData(arrGorduraVisceral);
             setTaxaMetabolicaBasalData(arrTaxaMetabolicaBasal);
+            setIdadeMetabolicaData(arrIdadeMetabolica);
             setLoading(false);
         });
     }, [uid]);

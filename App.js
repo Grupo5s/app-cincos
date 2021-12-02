@@ -15,6 +15,8 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import Routes from './src/routes';
 import { persistor, store } from './src/store';
+import firebaseApp from '@react-native-firebase/app';
+
 
 const App = () => {
   return (

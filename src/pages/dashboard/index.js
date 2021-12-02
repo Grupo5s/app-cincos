@@ -18,7 +18,7 @@ function Dashboard(props) {
     const authReducer = useSelector(state => state.authReducer);
 
     const [paciente, setPaciente] = useState({});
-    const [pesoAtual,setPesoAtual] = useState(0);
+    const [pesoAtual, setPesoAtual] = useState(0);
 
     const [loading, setLoading] = useState(false);
 
@@ -28,7 +28,7 @@ function Dashboard(props) {
     useEffect(() => {
         setLoading(true);
         setPaciente(authReducer.userData);
-
+        console.log('dashboard=> paciente ', paciente);
         atualizarPlayerID({
             Uid: authReducer.uid,
             PlayerID: authReducer.playerId
@@ -38,7 +38,7 @@ function Dashboard(props) {
             const resumo = response.data;
             setResumoTratamento(resumo);
 
-            obterDados(`Paciente/${authReducer.codigoPaciente}`).on('value',snapshot=>{
+            obterDados(`Paciente/${authReducer.codigoPaciente}`).on('value', snapshot => {
                 var pc = snapshot.val();
                 setPesoAtual(pc.PesoAtual);
             });

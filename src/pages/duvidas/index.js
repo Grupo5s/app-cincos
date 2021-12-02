@@ -11,16 +11,16 @@ function Duvidas(props) {
 
     const { navigation, page } = props;
 
-    const [post,setPost] = useState('');
-    const [loading,setLoading] = useState(false);
-    
+    const [post, setPost] = useState('');
+    const [loading, setLoading] = useState(false);
+
     useEffect(() => {
         setLoading(true);
         getOlderPost(3367).then(response => {
             const texto = response.data;
             setPost(texto);
             setLoading(false);
-        }).catch(error=>{})
+        }).catch(error => { })
     }, []);
 
     return <>
@@ -29,14 +29,14 @@ function Duvidas(props) {
             <View style={mainStyles.viewRecuo}>
                 <PageTitle title="DÚVIDAS" showLogo={true} />
                 <ScrollView>
-                   {post !='' && <HTMLView value={post.content.rendered.trim().replace(/\n/g, '')}/>} 
+                    {post != '' && <HTMLView value={post.content.rendered.trim().replace(/\n/g, '')} />}
                 </ScrollView>
             </View>
             <Loading5S
                 color=""
                 visible={loading}
                 color="#bbbe00"
-                overlayColor="rgba(255,255,255,0.80)"/>
+                overlayColor="rgba(255,255,255,0.80)" />
         </View>
     </>
 }

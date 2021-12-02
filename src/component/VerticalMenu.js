@@ -4,6 +4,8 @@ import mainStyles from '../mainStyles';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDados } from '../service/firebase';
+import meditation from '../assets/meditacao/meditation.png';
+import meditationOff from '../assets/meditacao/meditation-off.png';
 
 function VerticalMenu(props) {
 
@@ -31,7 +33,7 @@ function VerticalMenu(props) {
             userData: {}
         });
 
-        setDados(`Paciente/${authReducer.codigoPaciente}/Conectado`,false).then(response=> {   
+        setDados(`Paciente/${authReducer.codigoPaciente}/Conectado`, false).then(response => {
             navigation.navigate('Login');
         });
     }
@@ -58,6 +60,9 @@ function VerticalMenu(props) {
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('Receitas')}>
                 <Icon name="book" size={22} style={page == 'receitas' ? mainStyles.iconActive : mainStyles.iconInactive} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Meditacao')}>
+                <Image source={page == 'meditacao' ? meditation : meditationOff} style={{ width: 40, height: 40 }} />
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('Exercicios')}>
                 <Icon name="heartbeat" size={22} style={page == 'exercicios' ? mainStyles.iconActive : mainStyles.iconInactive} />

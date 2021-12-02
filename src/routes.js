@@ -15,6 +15,9 @@ import Ouvidoria from './pages/ouvidoria';
 import CameraView from './pages/perfil/camera';
 import LivrosReceitas from './pages/livros';
 import Exercicos from './pages/exercicios';
+import Meditacao from './pages/meditacao';
+import MeditacaoVideo from './pages/meditacao/video';
+import MeditacaoAudio from './pages/meditacao/audio';
 
 const Stack = createStackNavigator();
 
@@ -102,6 +105,24 @@ const Routes = () => {
             <Stack.Screen
                 name="Exercicios"
                 component={Exercicos}
+                options={{
+                    headerShown: false
+                }} />
+            <Stack.Screen
+                name="Meditacao"
+                component={Meditacao}
+                options={{
+                    headerShown: false
+                }} />
+            <Stack.Screen
+                name="MeditacaoVideo"
+                component={MeditacaoVideo}
+                options={{
+                    headerShown: false
+                }} />
+            <Stack.Screen
+                name="MeditacaoAudio"
+                component={MeditacaoAudio}
                 options={{
                     headerShown: false
                 }} />
