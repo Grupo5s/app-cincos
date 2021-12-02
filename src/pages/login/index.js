@@ -24,8 +24,10 @@ const Login = (props) => {
     //const [email, setEmail] = useState('bruno@linhaequilibre.com.br');
     //const [senha, setSenha] = useState('123456');
 
-    const [email, setEmail] = useState('rosisan_10@hotmail.com');
-    const [senha, setSenha] = useState('Felipe1010');
+    //const [email, setEmail] = useState('rosisan_10@hotmail.com');
+    //const [senha, setSenha] = useState('Felipe1010');
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
     const [loading, setLoading] = useState(false);
     const [playerID, setPlayerID] = useState('playerID');
 
@@ -75,9 +77,9 @@ const Login = (props) => {
                                 dispatch({ type: 'CHANGE_USERDATA', userData: pc });
                                 setLoading(false);
 
-                                //setDados(`Paciente/${paciente.Codigo}/Conectado`, true).then(response => {
-                                navigation.navigate('Dashboard');
-                                //});
+                                setDados(`Paciente/${paciente.Codigo}/Conectado`, true).then(response => {
+                                    navigation.navigate('Dashboard');
+                                });
                             });
 
                         } else {
