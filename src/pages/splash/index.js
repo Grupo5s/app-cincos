@@ -3,7 +3,7 @@ import {
     View,
     Image
 } from 'react-native';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo_2.png'
 import mainStyles from '../../mainStyles';
 
 const Splash = ({ navigation }) => {

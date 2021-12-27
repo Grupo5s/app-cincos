@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Image, TextInput, Text, TouchableOpacity, Linking } from 'react-native';
 import styles from './styles';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo_2.png';
 import mainStyles from '../../mainStyles';
 import { singleAlert } from '../../utils/alerts';
 import OneSignal from 'react-native-onesignal';

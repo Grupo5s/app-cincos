@@ -132,8 +132,8 @@ android {
         applicationId "com.cincos"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 26
-        versionName "2.0.2"
+        versionCode 28
+        versionName "2.0.4"
         multiDexEnabled true
         missingDimensionStrategy 'react-native-camera', 'general'
     }

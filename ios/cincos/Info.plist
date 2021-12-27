@@ -17,11 +17,13 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -37,20 +39,16 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
-	<key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>5S deseja acessar sua camera para capturar sua Alimentação e seu Peso.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>5S deseja obter sua localização para exibir as clínicas mais próximas a você.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>5S deseja acessar seu microfone para enviar mensagens de audio no recurso de Chat.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>5S deseja acesso ao seu album para salvar as fotos de sua Alimentação e seu Peso.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>5S deseja acesso ao seu album para salvar as fotos de sua Alimentação e seu Peso.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>
@@ -70,17 +68,51 @@
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>5S deseja acessar sua camera para capturar sua Alimentação e seu Peso.</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>5S deseja acessar seu microfone para enviar mensagens de audio no recurso de Chat.</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>5S deseja acesso ao seu album para salvar as fotos de sua Alimentação e seu Peso.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>5S deseja acesso ao seu album para salvar as fotos de sua Alimentação e seu Peso.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-    <string>5S deseja obter sua localização para exibir as clínicas mais próximas a você.</string>
-	<key>FirebaseAppDelegateProxyEnabled</key>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>CLIENT_ID</key>
+	<string>851896440244-nouqojaip4vgsqrv7otai8klo1m2l22c.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.851896440244-nouqojaip4vgsqrv7otai8klo1m2l22c</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>851896440244-n9vc3ri8eiqo37vn7m2bfhtf8boqmvae.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDM4RvEKmOYCLYLzu2og457kFC6R9u0-2I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>851896440244</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.cincos</string>
+	<key>PROJECT_ID</key>
+	<string>app5s-ac366</string>
+	<key>STORAGE_BUCKET</key>
+	<string>app5s-ac366.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
 	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:851896440244:ios:e48e79bf456b97cd920ee1</string>
+	<key>DATABASE_URL</key>
+	<string>https://app5s-ac366.firebaseio.com</string>
 </dict>
 </plist>

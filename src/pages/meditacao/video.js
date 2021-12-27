@@ -20,7 +20,7 @@ function MeditacaoVideo(props) {
                 </TouchableOpacity>
                 <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10 }}>
                     <TouchableOpacity
-                        onPress={() => Linking.openURL('https://www.youtube.com/watch?v=K_FP2ydkjAA&list=PLCQb1V9ViuU6K48gr6h2GG4xwqpYZmwWi&index=2')}
+                        onPress={() => Linking.openURL('https://www.youtube.com/watch?v=K_FP2ydkjAA&list=PLCQb1V9ViuU6K48gr6h2GG4xwqpYZmwWi&index=1')}
                         style={mainStyles.buttonDefaultOutline2}>
                         <Text>Introdução a <Text style={styles.textBotao}>Meditação</Text></Text>
                         <FEIcon name="play" style={styles.buttonPlayStopOff} />
@@ -50,31 +50,37 @@ function MeditacaoVideo(props) {
                         <FEIcon name="play" style={styles.buttonPlayStopOff} />
                     </TouchableOpacity>
                     <TouchableOpacity
-                        onPress={() => Linking.openURL('https://www.youtube.com/watch?v=xPwOMiN9hoQ&list=PLCQb1V9ViuU6K48gr6h2GG4xwqpYZmwWi&index=6')}
+                        onPress={() => Linking.openURL('https://www.youtube.com/watch?v=o3h7PbEGf7w&list=PLCQb1V9ViuU6K48gr6h2GG4xwqpYZmwWi&index=6')}
+                        style={mainStyles.buttonDefaultOutline2}>
+                        <Text>Meditação <Text style={styles.textBotao}>05</Text></Text>
+                        <FEIcon name="play" style={styles.buttonPlayStopOff} />
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => Linking.openURL('https://www.youtube.com/watch?v=xPwOMiN9hoQ&list=PLCQb1V9ViuU6K48gr6h2GG4xwqpYZmwWi&index=7')}
                         style={mainStyles.buttonDefaultOutline2}>
                         <Text>Meditação <Text style={styles.textBotao}>06</Text></Text>
                         <FEIcon name="play" style={styles.buttonPlayStopOff} />
                     </TouchableOpacity>
                     <TouchableOpacity
-                        onPress={() => Linking.openURL('https://www.youtube.com/watch?v=IKUZkfEBP_g&list=PLCQb1V9ViuU6K48gr6h2GG4xwqpYZmwWi&index=7')}
+                        onPress={() => Linking.openURL('https://www.youtube.com/watch?v=IKUZkfEBP_g&list=PLCQb1V9ViuU6K48gr6h2GG4xwqpYZmwWi&index=8')}
                         style={mainStyles.buttonDefaultOutline2}>
                         <Text>Meditação <Text style={styles.textBotao}>07</Text></Text>
                         <FEIcon name="play" style={styles.buttonPlayStopOff} />
                     </TouchableOpacity>
                     <TouchableOpacity
-                        onPress={() => Linking.openURL('https://www.youtube.com/watch?v=Bbhd9bRJ4Qo&list=PLCQb1V9ViuU6K48gr6h2GG4xwqpYZmwWi&index=8')}
+                        onPress={() => Linking.openURL('https://www.youtube.com/watch?v=Bbhd9bRJ4Qo&list=PLCQb1V9ViuU6K48gr6h2GG4xwqpYZmwWi&index=9')}
                         style={mainStyles.buttonDefaultOutline2}>
                         <Text>Meditação <Text style={styles.textBotao}>08</Text></Text>
                         <FEIcon name="play" style={styles.buttonPlayStopOff} />
                     </TouchableOpacity>
                     <TouchableOpacity
-                        onPress={() => Linking.openURL('https://www.youtube.com/watch?v=-snDE6vF5WA&list=PLCQb1V9ViuU6K48gr6h2GG4xwqpYZmwWi&index=9')}
+                        onPress={() => Linking.openURL('https://www.youtube.com/watch?v=-snDE6vF5WA&list=PLCQb1V9ViuU6K48gr6h2GG4xwqpYZmwWi&index=10')}
                         style={mainStyles.buttonDefaultOutline2}>
                         <Text>Meditação <Text style={styles.textBotao}>09</Text></Text>
                         <FEIcon name="play" style={styles.buttonPlayStopOff} />
                     </TouchableOpacity>
                     <TouchableOpacity
-                        onPress={() => Linking.openURL('https://www.youtube.com/watch?v=gPLtrUtOdfo&list=PLCQb1V9ViuU6K48gr6h2GG4xwqpYZmwWi&index=10')}
+                        onPress={() => Linking.openURL('https://www.youtube.com/watch?v=gPLtrUtOdfo&list=PLCQb1V9ViuU6K48gr6h2GG4xwqpYZmwWi&index=11')}
                         style={mainStyles.buttonDefaultOutline2}>
                         <Text>Meditação <Text style={styles.textBotao}>10</Text></Text>
                         <FEIcon name="play" style={styles.buttonPlayStopOff} />
