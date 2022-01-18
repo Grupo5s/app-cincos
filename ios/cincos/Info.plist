@@ -82,37 +82,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>CLIENT_ID</key>
-	<string>851896440244-nouqojaip4vgsqrv7otai8klo1m2l22c.apps.googleusercontent.com</string>
-	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.851896440244-nouqojaip4vgsqrv7otai8klo1m2l22c</string>
-	<key>ANDROID_CLIENT_ID</key>
-	<string>851896440244-n9vc3ri8eiqo37vn7m2bfhtf8boqmvae.apps.googleusercontent.com</string>
-	<key>API_KEY</key>
-	<string>AIzaSyDM4RvEKmOYCLYLzu2og457kFC6R9u0-2I</string>
-	<key>GCM_SENDER_ID</key>
-	<string>851896440244</string>
-	<key>PLIST_VERSION</key>
-	<string>1</string>
-	<key>BUNDLE_ID</key>
-	<string>com.cincos</string>
-	<key>PROJECT_ID</key>
-	<string>app5s-ac366</string>
-	<key>STORAGE_BUCKET</key>
-	<string>app5s-ac366.appspot.com</string>
-	<key>IS_ADS_ENABLED</key>
-	<false></false>
-	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
-	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
-	<key>IS_GCM_ENABLED</key>
-	<true></true>
-	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
-	<key>GOOGLE_APP_ID</key>
-	<string>1:851896440244:ios:e48e79bf456b97cd920ee1</string>
-	<key>DATABASE_URL</key>
-	<string>https://app5s-ac366.firebaseio.com</string>
 </dict>
 </plist>
